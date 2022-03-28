@@ -71,6 +71,8 @@ const ar = {
     visitor: "عزيزي الزائر",
     selectNational: "اختر الجنسية",
     national: "الجنسية",
+    light: 'ابيض',
+    dark: 'اسود'
   },
   auth: {
     delegateIdentity: "الصورة الشخصية",

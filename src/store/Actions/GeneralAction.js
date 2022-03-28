@@ -4,12 +4,11 @@ import i18n from "@locale";
 import * as Updates from "expo-updates";
 import {
   CHANGE_LANG,
-  GET_APP_INFO,
   CHANGE_MODAL_TOASTER,
   NETWORK_CHANGED,
+  CHANGE_THEME
 } from "../Types";
 import { store } from "..";
-import { getAppInfo } from "@apis";
 
 export const chooseLangAction = (lang) => {
   if (lang === "en") {
@@ -27,31 +26,31 @@ export const chooseLangAction = (lang) => {
   };
 };
 
+export const chooseThemeAction = (theme) => {
+  setTheme(theme);
+
+  return {
+    type: CHANGE_THEME,
+    payload: theme,
+  };
+};
+
 const setLang = async (lang) => {
   let currentLang = store.getState().general.lang;
-  if (currentLang != lang) {
+  if (currentLang !== lang) {
     await AsyncStorage.setItem("lang", lang).then(() => {
       Updates.reloadAsync();
     });
   }
 };
 
-export const getAppInfoAction = (setLoading) => {
-  return async (dispatch) => {
-    setLoading && setLoading(true);
-    const { data } = await getAppInfo();
-    setLoading && setLoading(false);
-
-    dispatch({
-      type: GET_APP_INFO,
-      payload: data
-        ? data
-        : {
-            currency: i18n.t("common:riyal"),
-          },
-    });
-  };
+const setTheme = async (theme) => {
+  let currentTheme = store.getState().general.theme;
+  if (currentTheme !== theme) {
+    await AsyncStorage.setItem("theme", theme);
+  }
 };
+
 
 export const modalToasterAction = (value) => {
   return async (dispatch) => {

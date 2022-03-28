@@ -20,4 +20,8 @@ export const COLORS = {
   bgTransparent: "rgba(0, 0, 0, 0.7)",
   red: "#a83f39",
   rateColor: "#F8C133",
+
+  bgLight: '#eee',
+  bgDark: '#121212',
+  mainDark: '#1f1f1f'
 };

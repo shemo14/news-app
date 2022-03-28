@@ -1,6 +1,6 @@
 // Any Common Validation Here
 
-import i18n from "@locale";
+import I18n from "@locale";
 
 export const GetCardType = (number) => {
   // visa
@@ -43,16 +43,16 @@ export const GetCardType = (number) => {
 export const validateEmail = (email) => {
   let mailReg = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/;
   return !mailReg.test(String(email).toLowerCase())
-    ? i18n.t("validate.emailError")
+    ? I18n.t("validate.emailError")
     : null;
 };
 
 export const ValidateComplain = (email, message, Subjecttext) => {
   let EmailValidate = validateEmail(email);
   let addressErr =
-    message?.length == 0 || !message ? i18n.t("topictitle") : null;
+    message?.length == 0 || !message ? I18n.t("topictitle") : null;
   let Subjecttextrr =
-    Subjecttext?.length == 0 || !Subjecttext ? i18n.t("Subjecttext") : null;
+    Subjecttext?.length == 0 || !Subjecttext ? I18n.t("Subjecttext") : null;
   return EmailValidate || addressErr || Subjecttextrr;
 };
 export const isPaymentCard = (value) => {
@@ -70,9 +70,9 @@ export const isPaymentCard = (value) => {
 
 export const validatePhone = (phone) => {
   if (phone.length == 0) {
-    return i18n.t("validate.enterCorrectPhone");
+    return I18n.t("validate.enterCorrectPhone");
   } else if (phone.length < 9) {
-    return i18n.t("PhoneLength");
+    return I18n.t("PhoneLength");
   } else {
     return null;
   }
@@ -81,10 +81,10 @@ export const validatePhone = (phone) => {
 export const validateCode = (code) => {
   // console.log("code, correctCode", code, correctCode);
   if (code.length !== 4) {
-    return i18n.t("validate.enterCorrectCode");
+    return I18n.t("validate.enterCorrectCode");
   }
   // else if (`${code}` !== `${correctCode}`) {
-  //   return i18n.t("validate.codeNotCorrect");
+  //   return I18n.t("validate.codeNotCorrect");
   // }
   else {
     return null;
@@ -93,19 +93,19 @@ export const validateCode = (code) => {
 
 export const validateDateAndTime = ({ date, time }) => {
   if (date.length == 0) {
-    return i18n.t("validate.selectDate");
+    return I18n.t("validate.selectDate");
   } else if (time.length == 0) {
-    return i18n.t("validate.selectTime");
+    return I18n.t("validate.selectTime");
   } else {
     return null;
   }
 };
 
 export const validateLogin = (phone, password) => {
-  if (phone.length == 0) return i18n.t("validate.enterPhone");
-  else if (phone.length <= 9) return i18n.t("PhoneLength");
-  else if (password.length == 0) return i18n.t("validate.enterPassword");
-  else if (password.length < 6) return i18n.t("PasswordLength");
+  if (phone.length == 0) return I18n.t("validate.enterPhone");
+  else if (phone.length <= 9) return I18n.t("PhoneLength");
+  else if (password.length == 0) return I18n.t("validate.enterPassword");
+  else if (password.length < 6) return I18n.t("PasswordLength");
   else if (phone.length > 0 && password.length > 0) return null;
 };
 
@@ -147,7 +147,7 @@ export const validateConfirmPassword = (inputs) => {
     if (password == confirmPassword) {
       return null;
     } else {
-      return i18n.t("validate.passwordNotMatch");
+      return I18n.t("validate.passwordNotMatch");
     }
 };
 
@@ -156,9 +156,9 @@ export const validateEditPassword = (inputs) => {
   if (password.length > 0 && newPassword == confirmPassword) {
     return null;
   } else if (password.length == 0) {
-    return i18n.t("validate.enterCurrentPassword");
+    return I18n.t("validate.enterCurrentPassword");
   } else if (confirmPassword != newPassword) {
-    return i18n.t("validate.passwordNotMatch");
+    return I18n.t("validate.passwordNotMatch");
   } else return null;
 };
 
@@ -175,28 +175,28 @@ export const validatePayment = (inputs) => {
   } else if (transfer_image.length > 0) {
     return null;
   } else {
-    return i18n.t("validate.allInputRequired");
+    return I18n.t("validate.allInputRequired");
   }
 };
 
 export const validateResetPassword = (inputs) => {
   const { password, confirmPassword, code } = inputs;
   if (code.length == 0 || code.length < 4) {
-    return i18n.t("validate.enterCvc");
+    return I18n.t("validate.enterCvc");
   }
   if (password == confirmPassword) {
     return null;
   } else {
-    return i18n.t("validate.passwordNotMatch");
+    return I18n.t("validate.passwordNotMatch");
   }
 };
 
 export const validateUpdatePassword = (inputs) => {
   const { new_password, password, old_password } = inputs;
   if (old_password.length == 0) {
-    return i18n.t("validate.enterCurrentPassword");
+    return I18n.t("validate.enterCurrentPassword");
   } else if (password != new_password) {
-    return i18n.t("validate.passwordNotMatch");
+    return I18n.t("validate.passwordNotMatch");
   } else {
     return false;
   }
@@ -210,46 +210,46 @@ export const validateUpdateProfile = (inputs) => {
     error.emailError = emailError;
   }
   if (phone.length == 0) {
-    error.phoneError = i18n.t("validate.enterCorrectPhone");
+    error.phoneError = I18n.t("validate.enterCorrectPhone");
   }
   if (country_id.length == 0) {
-    error.countryError = i18n.t("validate.countryError");
+    error.countryError = I18n.t("validate.countryError");
   }
   if (city_id.length == 0) {
-    error.cityError = i18n.t("validate.cityError");
+    error.cityError = I18n.t("validate.cityError");
   }
   if (name.length == 0) {
-    error.nameError = i18n.t("validate.enterYourName");
+    error.nameError = I18n.t("validate.enterYourName");
   }
   return error;
 };
 
 export const validateName = (name) =>
   name.length == 0
-    ? i18n.t("nameErr")
+    ? I18n.t("nameErr")
     : name.length < 2
-    ? i18n.t("nameLength")
+    ? I18n.t("nameLength")
     : null;
 
 export const validatePassword = (Password) =>
   Password === ""
-    ? i18n.t("PasswordErr")
+    ? I18n.t("PasswordErr")
     : Password?.length < 6
-    ? i18n.t("PasswordLength")
+    ? I18n.t("PasswordLength")
     : null;
 
 export const validateTwoPasswords = (password, confirmPassword) => {
   return confirmPassword == ""
-    ? i18n.t("ConfirmPasswordErr")
+    ? I18n.t("ConfirmPasswordErr")
     : password != confirmPassword
-    ? i18n.t("validate.passwordNotMatch")
+    ? I18n.t("validate.passwordNotMatch")
     : null;
 };
 
 export const validateAddress = (Address) =>
-  Address === "" ? i18n.t("AddrressErr") : null;
+  Address === "" ? I18n.t("AddrressErr") : null;
 
-export const validateCity = (City) => (City === "" ? i18n.t("CityErr") : null);
+export const validateCity = (City) => (City === "" ? I18n.t("CityErr") : null);
 
 export const VaildateResetPassword = (inputes) => {
   let { code, password, confirmPassword } = inputes;
@@ -303,10 +303,10 @@ export const VaildateRegisterProvider = ({
   let NameValidate = validateName(name);
   let PhoneValidate = validatePhone(phone);
   let EmailValidate = validateEmail(email);
-  let category_idValidate = category_id == "" ? i18n.t("DepValidate") : null;
-  let storArErr = restaurant_name_ar == "" ? i18n.t("storeArValidate") : null;
-  let storEnErr = restaurant_name_en == "" ? i18n.t("storeEnValidate") : null;
-  let CityValidate = cities?.length == 0 ? i18n.t("CityErr") : null;
+  let category_idValidate = category_id == "" ? I18n.t("DepValidate") : null;
+  let storArErr = restaurant_name_ar == "" ? I18n.t("storeArValidate") : null;
+  let storEnErr = restaurant_name_en == "" ? I18n.t("storeEnValidate") : null;
+  let CityValidate = cities?.length == 0 ? I18n.t("CityErr") : null;
   let AddressValidate = validateAddress(address);
   let PasswordValidate = validatePassword(password);
   let ConfirmPasswordValidate = validateTwoPasswords(password, confirmPassword);
@@ -360,17 +360,17 @@ export const validateChangePassword = (
 ) => {
   let err =
     Password.length == 0
-      ? i18n.t("validate.enterCurrentPassword")
+      ? I18n.t("validate.enterCurrentPassword")
       : Password?.length < 6
-      ? i18n.t("PasswordLength")
+      ? I18n.t("PasswordLength")
       : newPassword.length == 0
-      ? i18n.t("enternewPassword")
+      ? I18n.t("enternewPassword")
       : newPassword?.length < 6
-      ? i18n.t("PasswordLength")
+      ? I18n.t("PasswordLength")
       : confirmPassword.length == 0
-      ? i18n.t("enterconfirmNewPass")
+      ? I18n.t("enterconfirmNewPass")
       : confirmPassword != newPassword
-      ? i18n.t("validate.passwordNotMatch")
+      ? I18n.t("validate.passwordNotMatch")
       : null;
   return err;
 };
@@ -378,19 +378,19 @@ export const validateChangePassword = (
 export const ValidateAddProduct = (input) => {
   let err =
     input.ProductAr == "" || input.ProductAr.length < 2
-      ? i18n.t("ProdenameArErr")
+      ? I18n.t("ProdenameArErr")
       : input.ProductEn == "" || input.ProductEn.length < 2
-      ? i18n.t("ProdnameEnErr")
+      ? I18n.t("ProdnameEnErr")
       : input?.license?.length == 0
-      ? i18n.t("ProdPiceErr")
+      ? I18n.t("ProdPiceErr")
       : input.Availablenumber == ""
-      ? i18n.t("EnteravailableQuantity")
+      ? I18n.t("EnteravailableQuantity")
       : input.ProductPrice == ""
-      ? i18n.t("ProdPricErr")
+      ? I18n.t("ProdPricErr")
       : input.productspecification == ""
-      ? i18n.t("ProductDescAr")
+      ? I18n.t("ProductDescAr")
       : input.ProductDescEn == ""
-      ? i18n.t("ProductDescEn")
+      ? I18n.t("ProductDescEn")
       : null;
   return err;
 };

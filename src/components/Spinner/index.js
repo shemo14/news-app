@@ -2,7 +2,6 @@ import React from "react";
 import { ActivityIndicator, View, StyleSheet, Image } from "react-native";
 import { COLORS, width, height } from "@common";
 import { scale, verticalScale } from "../../common/Scalling";
-import { Images } from "../../common";
 
 const SIZES = { SMALL: "small", LARGE: "large" };
 

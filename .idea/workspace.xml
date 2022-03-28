@@ -1,7 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="ab396865-b90a-4143-9ca8-92045d570104" name="Default Changelist" comment="" />
+    <list default="true" id="ab396865-b90a-4143-9ca8-92045d570104" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/news-app.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/LangSwitchTab/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/ThemeSwitchTab/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReactotronConfig.js" beforeDir="false" afterPath="$PROJECT_DIR$/ReactotronConfig.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/babel.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/babel.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/Colors.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/Colors.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/Constants.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/Constants.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/Images.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/Images.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/Lotties.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/Lotties.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/Validator.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/Validator.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ArticleCard/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ArticleCard/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Container/NoInternet.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Container/NoInternet.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Container/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Container/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/EmptyList/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/EmptyList/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/List/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/List/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/SText/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SText/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Spinner/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Spinner/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Toaster/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Toaster/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/locale/ar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/locale/ar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/locale/en.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/locale/en.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/navigation/MainStack.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/navigation/MainStack.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/navigation/RootStack.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/navigation/RootStack.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/navigation/TabNavigator.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/navigation/TabNavigator.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/navigation/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/navigation/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/Home/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/Home/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/Settings/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/Settings/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/ApiCentral.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/ApiCentral.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/ArticlesApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/ArticlesApi.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/SearchApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/SearchApi.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/Actions/ArticlesAction.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/Actions/ArticlesAction.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/Actions/GeneralAction.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/Actions/GeneralAction.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/Actions/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/Actions/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/Reducers/ArticleReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/Reducers/ArticleReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/Reducers/GeneralReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/Reducers/GeneralReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/Reducers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/Reducers/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/Types/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/Types/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,6 +68,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="26ydtTtZ4m15EEuSKKYcSuD6wSg" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -23,8 +78,25 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="dart.analysis.tool.window.visible" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/ThemeSwitchTab" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="yarn" />
+    <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components/ThemeSwitchTab" />
+      <recent name="$PROJECT_DIR$/src/components" />
+      <recent name="$PROJECT_DIR$/assets" />
+      <recent name="$PROJECT_DIR$/src/common" />
+      <recent name="$PROJECT_DIR$/assets/images" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -35,10 +107,24 @@
       <option name="presentableId" value="Default" />
       <updated>1648399975300</updated>
       <workItem from="1648399976765" duration="186000" />
+      <workItem from="1648400361669" duration="13984000" />
+      <workItem from="1648453108712" duration="17246000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>

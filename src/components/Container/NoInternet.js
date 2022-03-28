@@ -1,29 +1,33 @@
-import React, { useEffect, useRef } from "react";
+import React from "react";
 import { StyleSheet, View, Image } from "react-native";
-import { COLORS, width, height, Images } from "../../common";
+import { COLORS, width, fonts, moderateScale, verticalScale } from "../../common";
 import { SText } from "../SText";
-import i18n from "@locale";
-import { moderateScale, verticalScale } from "../../common/Scalling";
+import I18n from "@locale";
 import LottieView from "lottie-react-native";
+import { Lotties } from "../../common";
 
 const NoInternet = ({}) => {
   return (
-    <View style={[styles.container]}>
-      {/* <Image source={Images.noWifi} style={styles.img} /> */}
-      <LottieView
-        autoPlay
-        loop
-        style={{
-          width: 400,
-          height: 400,
-          backgroundColor: COLORS.white,
-        }}
-        source={require("../../../assets/Images/noInternet.json")}
-        // OR find more Lottie files @ https://lottiefiles.com/featured
-        // Just click the one you like, place that file in the 'assets' folder to the left, and replace the above 'require' statement
-      />
-      <SText title={i18n.t("common.noInternet")} style={styles.text} />
-    </View>
+      <View style={[styles.container]}>
+        {/* <Image source={Images.noWifi} style={styles.img} /> */}
+        <View
+            style={{ height: moderateScale(300), marginTop: moderateScale(-100) }}
+        >
+          <LottieView
+              source={Lotties.noInternet}
+              autoPlay
+              loop
+              style={{
+                flex: 1,
+                width: "100%",
+                height: "100%",
+                backgroundColor: "transparent",
+              }}
+          />
+        </View>
+
+        <SText title={I18n.t("common.noInternet")} style={styles.text} />
+      </View>
   );
 };
 
@@ -44,7 +48,8 @@ const styles = StyleSheet.create({
     textAlign: "center",
     width: "80%",
     alignSelf: "center",
-    marginTop: verticalScale(27),
+    marginTop: moderateScale(27),
+    fontFamily: fonts.bold,
   },
   img: {
     width: "50%",

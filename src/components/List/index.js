@@ -1,9 +1,8 @@
 import React, { useCallback } from "react";
 import { FlatList, RefreshControl, ActivityIndicator } from "react-native";
 import i18n from "@locale";
-import { EmptyList } from "../EmptyList";
-import { COLORS, Images } from "@common";
-import { moderateScale, verticalScale } from "../../common/Scalling";
+import { EmptyList } from "@components";
+import { COLORS, moderateScale, verticalScale } from "@common";
 
 export const List = ({
   data,
@@ -29,6 +28,7 @@ export const List = ({
   };
 
   const keyExtractor = useCallback((item, index) => index.toString(), []);
+
   return (
     <FlatList
       keyExtractor={keyExtractor}

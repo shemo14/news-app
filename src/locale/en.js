@@ -75,6 +75,8 @@ const en = {
     visitor: "Our Visitor",
     selectNational: "Select National",
     national: "National",
+    light: 'light',
+    dark: 'dark'
   },
   auth: {
     delegateIdentity: "Personal Picture",

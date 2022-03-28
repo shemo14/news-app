@@ -1,11 +1,9 @@
 import React from "react";
 import { StyleSheet, View, Image } from "react-native";
-import { COLORS, width, height } from "@common";
+import { COLORS, width, height, moderateScale, verticalScale } from "@common";
 import { SText } from "../SText";
 import i18n from "@locale";
 import { Icon } from "../Icon";
-import { Btn } from "../Btn";
-import { moderateScale, verticalScale } from "../../common/Scalling";
 
 export const EmptyList = ({
   icon,
@@ -13,8 +11,6 @@ export const EmptyList = ({
   iconType,
   message,
   styleC,
-  action,
-  btnName,
 }) => {
   return (
     <View style={[styles.container, styleC]}>
@@ -30,14 +26,6 @@ export const EmptyList = ({
         />
       )}
       <SText title={message || i18n.t("common.noResult")} style={styles.text} />
-      {action && (
-        <Btn
-          onPress={action}
-          text={btnName}
-          btnStyle={styles.btnStyle}
-          // textStyle={styles.openMapText}
-        />
-      )}
     </View>
   );
 };

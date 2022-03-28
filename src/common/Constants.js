@@ -1,13 +1,11 @@
 import { Dimensions, Platform, Share } from "react-native";
-import { Images } from "./Images";
 import { Feather, Fontisto } from "@expo/vector-icons";
 import ConstantsExpo from "expo-constants";
-import i18n from "@locale";
+import I18n from "@locale";
+import { Images } from "./Images";
 
 export const Constants = {
-  baseURL: "https://ekraa.4hoste.com/api/v1/",
-  paymentUrl: "https://ekraa.4hoste.com/",
-  phoneCode: "+966",
+  baseURL: "https://newsapi.org/v2/",
 };
 
 export const { width, height } = Dimensions.get("window");
@@ -20,28 +18,21 @@ export const IS_IOS = Platform.OS === "ios";
 export const barHeight = ConstantsExpo.statusBarHeight;
 
 export const fonts = {
-  regular: "Bahij_TheSansArabic-SemiBold",
-  Plain: "Bahij_TheSansArabic-Plain",
-  bold: "Bahij_TheSansArabic-SemiBold",
+  regular: "ArbFONTS-Droid-Naskh-Regular",
+  bold: "ArbFONTS-Droid-Arabic-Naskh-Bold",
 };
 
-export const imagesCache = [
-  Images.icon,
-  Images.default,
-  Images.Logo,
-  Images.success,
-  Images.Hawk,
-  // Your Cache Images Here
-];
-
 export const fontCache = {
-  [fonts.regular]: require("../../assets/fonts/Bahij_TheSansArabic-SemiBold.ttf"),
-  [fonts.Plain]: require("../../assets/fonts/Bahij_TheSansArabic-Plain.ttf"),
-  [fonts.bold]: require("../../assets/fonts/Bahij_TheSansArabic-Bold.ttf"),
-
+  [fonts.regular]: require("../../assets/fonts/ArbFONTS-Droid-Naskh-Regular.ttf"),
+  [fonts.bold]: require("../../assets/fonts/ArbFONTS-Droid-Arabic-Naskh-Bold.ttf"),
   ...Feather.font,
   ...Fontisto.font,
 };
+
+export const imagesCache = [
+  // Your Cache Images Here
+  Images.default,
+];
 
 export const map = {
   // apiKey: "AIzaSyAC-Lk_iSWReCSfPVmCmrAGiKNMtkcJUH8",
@@ -50,7 +41,7 @@ export const map = {
   longitudeDelta: 0.005,
 };
 
-export const shareFn = (i18n, data) => {
+export const shareFn = (I18n, data) => {
   const storeLink =
     Platform.OS == "ios" ? "YourAppleStoreLinkHere" : "YourPlayStoreLinkHere";
 
@@ -58,8 +49,8 @@ export const shareFn = (i18n, data) => {
     {
       message:
         data?.message ||
-        `${i18n.t("common.appName")} \n ${data?.url || storeLink}`,
-      title: data?.title || i18n.t("common:shareApp"),
+        `${I18n.t("common.appName")} \n ${data?.url || storeLink}`,
+      title: data?.title || I18n.t("common:shareApp"),
       url: data?.url || storeLink,
     },
     {
@@ -72,10 +63,10 @@ export const shareFn = (i18n, data) => {
 export const gender = [
   {
     id: "male",
-    name: i18n.t("auth.male"),
+    name: I18n.t("auth.male"),
   },
   {
     id: "female",
-    name: i18n.t("auth.female"),
+    name: I18n.t("auth.female"),
   },
 ];

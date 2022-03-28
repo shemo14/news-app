@@ -26,7 +26,9 @@ export const Container = ({
   keyboardVerticalOffset,
   ...props
 }) => {
-  const { network } = useSelector((state) => state.general);
+  const { network, theme } = useSelector((state) => state.general);
+  const backgroundColor    = { backgroundColor: theme === 'light' ? COLORS.bgLight : COLORS.bgDark }
+
 
   let renderContent = () => {
     return scrollEnabled ? (
@@ -34,7 +36,7 @@ export const Container = ({
       <ScrollView
         style={[styles.containerScrollView, style]}
         keyboardShouldPersistTaps={keyboardShouldPersistTaps}
-        contentContainerStyle={contentContainerStyle}
+        contentContainerStyle={[contentContainerStyle, backgroundColor]}
         showsVerticalScrollIndicator={false}
         {...props}
       >
@@ -42,9 +44,11 @@ export const Container = ({
       </ScrollView>
     ) : (
       // </View>
-      <View style={[styles.Container, style]}>{children}</View>
+      <View style={[styles.Container, style, backgroundColor]}>{children}</View>
     );
   };
+
+  console.log('network', network, saveArea)
 
   return loading ? (
     <Spinner mode="full" />
@@ -74,6 +78,8 @@ export const Container = ({
       <NoInternet />
     </View>
   );
+
+
 };
 
 const styles = StyleSheet.create({
@@ -84,7 +90,7 @@ const styles = StyleSheet.create({
   Container: {
     flex: 1,
     flexGrow: 1,
-    backgroundColor: COLORS.bgLight,
+    backgroundColor:  COLORS.bgLight,
   },
   containerScrollView: {
     // flex: 1,

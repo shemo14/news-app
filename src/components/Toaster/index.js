@@ -1,10 +1,8 @@
 import React from "react";
 import { StyleSheet, View } from "react-native";
 import FlashMessage, { showMessage } from "react-native-flash-message";
-import { COLORS } from "../../common/Colors";
-import { fonts } from "../../common/Constants";
+import { COLORS, fonts, moderateScale, scale } from "@common";
 import Constants from "expo-constants";
-import { moderateScale, scale } from "../../common/Scalling";
 import { SText } from "../SText";
 
 const ColorTheme = {
