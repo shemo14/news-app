@@ -47,9 +47,7 @@ export const Container = ({
       <View style={[styles.Container, style, backgroundColor]}>{children}</View>
     );
   };
-
-  console.log('network', network, saveArea)
-
+  
   return loading ? (
     <Spinner mode="full" />
   ) : // <LogoSpinner fullStretch />

@@ -6,7 +6,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { getArticlesAction, getMoreArticlesAction } from '../../store/Actions'
 
 
-export const  Home = () => {
+export const  Home = ({ navigation }) => {
     const dispatch = useDispatch();
     const [loading, setLoading] = useState(false);
     const [moreLoading, setMoreLoading] = useState(false);
@@ -24,10 +24,9 @@ export const  Home = () => {
         dispatch(getMoreArticlesAction(setMoreLoading))
     }
 
-
     return (
         <View style={{ flex: 1 }}>
-            <Header />
+            <Header screen={'Home'} />
 
             <Container header={true} loading={loading}>
                 <List
@@ -35,7 +34,7 @@ export const  Home = () => {
                     onEndReached={getMore}
                     onRefresh={onRefresh}
                     renderItem={({ item }) => (
-                        <ArticleCard dep={item} />
+                        <ArticleCard dep={item} navigation={navigation} />
                     )}
                     ListEmptyComponent={<EmptyList message={I18n.t("NoProviders")} />}
                     ListFooterComponent={() => (

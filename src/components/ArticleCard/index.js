@@ -5,7 +5,7 @@ import { Images, COLORS, CommonStyle, fonts, moderateScale, scale, verticalScale
 import {useSelector} from "react-redux";
 // import { toProviderProducts } from "@routes";
 
-export const ArticleCard = ({ dep }) => {
+export const ArticleCard = ({ dep, navigation }) => {
     const { theme } = useSelector((state) => state.general);
     const backgroundColor    = { backgroundColor: theme === 'light' ? COLORS.white : COLORS.mainDark }
     const [loadingImage, setloadingImage] = useState(false);
@@ -19,7 +19,7 @@ export const ArticleCard = ({ dep }) => {
         <View style={[styles.Card, backgroundColor]}>
             <TouchableOpacity
                 activeOpacity={0.8}
-                // onPress={() => toProviderProducts({ id: dep?.id })}
+                onPress={() => navigation.navigate('ArticleDetails', { details: dep }) }
             >
                 <Image
                     onLoadStart={(e) => setloadingImage(true)}

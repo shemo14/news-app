@@ -1,6 +1,6 @@
 import * as React from "react";
 import { createStackNavigator, CardStyleInterpolators, } from "@react-navigation/stack";
-import { Home, Settings } from '../screens'
+import { ArticleDetails } from '../screens'
 import { TabNavigator } from './TabNavigator'
 
 const Stack = createStackNavigator();
@@ -15,6 +15,7 @@ const MainStackNavigator = () => {
             }}
         >
             <Stack.Screen name="TabNavigator" component={TabNavigator} />
+            <Stack.Screen name="ArticleDetails" component={ArticleDetails} />
         </Stack.Navigator>
     );
 };
