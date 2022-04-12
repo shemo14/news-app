@@ -16,10 +16,10 @@ type Props = {
 
 export const  Header: React.FC<Props> = ({ headerStyles, screen, navigation, title }) => {
     const [search, setSearch] : any   = useState("");
-    const dispatch              = useDispatch();
-    const [loading, setLoading] = useState(false);
-    const { theme } = useSelector((state) => state.general);
-    const backgroundColor    = { backgroundColor: theme === 'dark' ? COLORS.mainDark : COLORS.white }
+    const dispatch                    = useDispatch();
+    const [loading, setLoading]       = useState(false);
+    const { theme }                   = useSelector((state) => state.general);
+    const backgroundColor             = { backgroundColor: theme === 'dark' ? COLORS.mainDark : COLORS.white }
 
     const onSearch = (e: number | string) => {
         setLoading(true)
@@ -33,7 +33,7 @@ export const  Header: React.FC<Props> = ({ headerStyles, screen, navigation, tit
                 screen === 'Home' ?
                     <SearchInput
                         value={search}
-                        onChangeText={(e) => onSearch(e)}
+                        onChangeText={(e : any) => onSearch(e)}
                         IconName={"magnify"}
                         placeholder={I18n.t("common.searchall")}
                         containerStyle={styles.searchInput}

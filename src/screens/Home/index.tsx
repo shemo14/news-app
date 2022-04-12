@@ -6,7 +6,9 @@ import { useDispatch, useSelector } from "react-redux";
 import { getArticlesAction, getMoreArticlesAction } from '../../store/Actions'
 
 
-export const  Home = ({ navigation }: any) => {
+type Props = { navigation: object; }
+
+export const  Home : React.FC<Props> = ({ navigation }) => {
     const dispatch = useDispatch();
     const [loading, setLoading] = useState(false);
     const [moreLoading, setMoreLoading] = useState(false);

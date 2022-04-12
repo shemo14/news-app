@@ -9,6 +9,7 @@ import I18n from "@locale"
 export const  Settings = () => {
     const { theme } = useSelector((state) => state.general);
     const backgroundColor    = { backgroundColor: theme === 'dark' ? COLORS.mainDark : COLORS.white }
+
     return (
         <View style={{ flex: 1 }}>
             <Header title={I18n.t('settings')} />

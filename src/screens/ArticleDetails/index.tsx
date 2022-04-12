@@ -3,9 +3,11 @@ import {View, Image, StyleSheet} from 'react-native'
 import { Container, Header, SText } from '@components'
 import { useDispatch } from "react-redux";
 import { getArticlesAction } from '../../store/Actions'
-import { COLORS, CommonStyle, fonts, moderateScale, scale, verticalScale, height } from "@common";
+import { COLORS, fonts, moderateScale, scale, height } from "@common";
 
-export const  ArticleDetails = ({ navigation, route } : any) => {
+type Props = { navigation: object; route: object}
+
+export const  ArticleDetails : React.FC<Props> = ({ navigation, route }) => {
     const dispatch = useDispatch();
     const [loading, setLoading] = useState(false);
     const { details } = route.params;
