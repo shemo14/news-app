@@ -1,20 +1,27 @@
-import React, { Fragment, useEffect, useState } from "react";
-import { View, TouchableOpacity } from 'react-native'
+import React, { useState } from "react";
+import { View, TouchableOpacity, I18nManager } from 'react-native'
 import I18n from "@locale"
 import { styles } from '../../styles'
-import { SearchInput, SText, Icon } from '@components'
+import { SearchInput, Icon, SText } from '@components'
 import { searchAction } from '../../store/Actions'
 import {useDispatch, useSelector} from "react-redux";
-import {COLORS} from "../../common";
+import {COLORS, width} from "../../common";
 
-export const  Header = ({ headerStyles, screen, navigation }) => {
-    const [search, setSearch]   = useState("");
+type Props = {
+    headerStyles: object;
+    screen: string;
+    navigation: object;
+    title: string
+}
+
+export const  Header: React.FC<Props> = ({ headerStyles, screen, navigation, title }) => {
+    const [search, setSearch] : any   = useState("");
     const dispatch              = useDispatch();
     const [loading, setLoading] = useState(false);
     const { theme } = useSelector((state) => state.general);
-    const backgroundColor    = { backgroundColor: theme === 'light' ? COLORS.white : COLORS.mainDark }
+    const backgroundColor    = { backgroundColor: theme === 'dark' ? COLORS.mainDark : COLORS.white }
 
-    const onSearch = (e) => {
+    const onSearch = (e: number | string) => {
         setLoading(true)
         setSearch(e)
         dispatch(searchAction(setLoading, e))
@@ -31,9 +38,16 @@ export const  Header = ({ headerStyles, screen, navigation }) => {
                         placeholder={I18n.t("common.searchall")}
                         containerStyle={styles.searchInput}
                     /> :
-                    <TouchableOpacity onPress={() => navigation.goBack()} style={{ backgroundColor: COLORS.main, alignSelf: 'flex-end', margin: 20, justifyContent: 'center', alignItems: 'center', padding: 5, borderRadius: 2 }}>
-                        <Icon type={'Ionicons'} name={'chevron-back'} />
-                    </TouchableOpacity>
+                    <View style={{ flexDirection: 'row' , width, alignItems: 'center' }}>
+                        {
+                            screen === 'ArticleDetails' ?
+                                <TouchableOpacity onPress={() => navigation.goBack()} style={{ backgroundColor: COLORS.main, alignSelf: 'flex-end', margin: 20, justifyContent: 'center', alignItems: 'center', padding: 5, borderRadius: 2 }}>
+                                    <Icon type={'Entypo'} name={I18nManager.isRTL ?  'chevron-right' : 'chevron-left'} />
+                                </TouchableOpacity> : null
+                        }
+
+                        <SText title={title} style={{ textAlign: 'center', fontSize: 18, marginHorizontal: 20 }} />
+                    </View>
             }
 
         </View>

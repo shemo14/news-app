@@ -1,7 +1,6 @@
 import React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { useSafeAreaInsets } from "react-native-safe-area-context";
-import { scale, IS_IOS, COLORS } from "@common";
+import { COLORS } from "@common";
 import { Icon, SText } from '@components'
 import { Home, Settings } from '@screens'
 import I18n from '@locale'
@@ -9,9 +8,8 @@ import {useSelector} from "react-redux";
 const Tab = createBottomTabNavigator();
 
 export const TabNavigator = () => {
-    const insets = useSafeAreaInsets();
     const { theme } = useSelector((state) => state.general);
-    const backgroundColor    = { backgroundColor: theme === 'light' ? COLORS.white : COLORS.mainDark }
+    const backgroundColor = { backgroundColor: theme === 'dark' ? COLORS.mainDark : COLORS.white }
 
     return (
         <Tab.Navigator
@@ -39,7 +37,7 @@ export const TabNavigator = () => {
                                 type={"antDesign"}
                                 name={"home"}
                             />
-                            <SText title={'News'} style={{ color: focused ? COLORS.secondary : COLORS.grayDark,  }} />
+                            <SText title={I18n.t('common.news')} style={{ color: focused ? COLORS.secondary : COLORS.grayDark,  }} />
                         </>
                     ),
                 }}
@@ -60,7 +58,7 @@ export const TabNavigator = () => {
                             type={"ionicons"}
                             name={"settings"}
                         />
-                    <SText title={'Settings'} style={{ color: focused ? COLORS.secondary : COLORS.grayDark, }} />
+                    <SText title={I18n.t('settings')} style={{ color: focused ? COLORS.secondary : COLORS.grayDark, }} />
                     </>
                     ),
                 }}

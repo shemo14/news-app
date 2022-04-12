@@ -1,17 +1,18 @@
 import { useState } from 'react';
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
 import { RootNavigator } from './src/navigation'
 import { Provider } from "react-redux";
 import { PersistGate } from "redux-persist/integration/react";
 import { persistedStore, store } from "@store";
-import { COLORS, fontCache, imagesCache } from "@common";
+import { fontCache, imagesCache } from "@common";
 import * as Font from "expo-font";
 import { Asset } from "expo-asset";
 import AppLoading from "expo-app-loading";
 
+
 export default function App() {
     const [isReady, setIsReady] = useState(false);
+    const { theme } = store.getState().general;
 
     const loadCacheResources = async () => {
         try {
@@ -24,6 +25,8 @@ export default function App() {
         }
     };
 
+
+
     if (!isReady) {
         return (
             <AppLoading
@@ -35,7 +38,7 @@ export default function App() {
     } else {
         return (
             <Provider store={store}>
-                <StatusBar style={{backgroundColor: COLORS.main}}/>
+                <StatusBar style={theme == 'light' ? 'dark' : "light"} />
                 <PersistGate persistor={persistedStore}>
                     <RootNavigator/>
                 </PersistGate>

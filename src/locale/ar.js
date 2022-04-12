@@ -2,10 +2,12 @@ const ar = {
   common: {
     appName: "اكراء",
     home: "الرئيسية",
+    news: "الاخبار",
     noResult: "لا يوجد نتائج.",
     riyal: "ر.س",
     confirm: "تاكيد",
     lang: "اللغة",
+    theme: 'المظهر',
     ar: "عربي",
     en: "English",
     langType: "عربي",
@@ -447,6 +449,7 @@ const ar = {
   providerInfo: "بيانات مقدم الخدمة ( المطعم )",
   call: "التواصل",
   iban: "رقم الحساب او stc",
+  settings: 'الاعدادات'
 };
 
 export default ar;

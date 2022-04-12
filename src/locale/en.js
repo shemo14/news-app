@@ -1,11 +1,13 @@
 const en = {
   common: {
-    appName: "Ekraa",
+    appName: "News App",
     home: "Home",
+    news: "News",
     noResult: "No Results here, Try again later.",
     riyal: "RS",
     confirm: "Confirm",
     lang: "Language",
+    theme: "Theme",
     langType: "English",
     ar: "عربي",
     en: "English",
@@ -454,6 +456,7 @@ const en = {
   providerInfo: "Provider Info",
   call: "Call",
   iban: "Account number or STC",
+  settings: 'Settings'
 };
 
 export default en;

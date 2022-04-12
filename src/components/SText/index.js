@@ -6,7 +6,7 @@ import {useSelector} from "react-redux";
 
 export const SText = ({ title, style, ...props }) =>{
   const { theme } = useSelector((state) => state.general);
-  const color    = { color: theme === 'light' ? COLORS.mainDark : COLORS.white }
+  const color    = { color: theme === 'dark' ? COLORS.white : COLORS.mainDark }
 
   return(
       <Text style={[styles.text, color, style,]} {...props}>

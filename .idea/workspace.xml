@@ -5,14 +5,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ab396865-b90a-4143-9ca8-92045d570104" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/screens/ArticleDetails/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.json" beforeDir="false" afterPath="$PROJECT_DIR$/app.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/ArticleCard/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ArticleCard/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Container/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Container/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/EmptyList/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/EmptyList/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Header/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/navigation/MainStack.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/navigation/MainStack.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/List/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/List/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/SText/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SText/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/SearchInput/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SearchInput/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/locale/ar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/locale/ar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/locale/en.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/locale/en.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/navigation/RootStack.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/navigation/RootStack.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/navigation/TabNavigator.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/navigation/TabNavigator.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/ArticleDetails/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/ArticleDetails/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/screens/Home/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/Home/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/Settings/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/Settings/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,6 +57,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="yarn" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -67,7 +81,10 @@
       <workItem from="1648399976765" duration="186000" />
       <workItem from="1648400361669" duration="13984000" />
       <workItem from="1648453108712" duration="19389000" />
-      <workItem from="1648583502349" duration="5248000" />
+      <workItem from="1648583502349" duration="5456000" />
+      <workItem from="1649239961701" duration="93000" />
+      <workItem from="1649671067230" duration="89000" />
+      <workItem from="1649671176618" duration="8736000" />
     </task>
     <servers />
   </component>

@@ -1,4 +1,4 @@
-import React, { Fragment, useEffect, useState, useCallback } from "react";
+import React, { useEffect, useState, useCallback } from "react";
 import { View, ActivityIndicator } from 'react-native'
 import I18n from "@locale"
 import { Container, Header, List, EmptyList, ArticleCard } from '@components'
@@ -6,7 +6,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { getArticlesAction, getMoreArticlesAction } from '../../store/Actions'
 
 
-export const  Home = ({ navigation }) => {
+export const  Home = ({ navigation }: any) => {
     const dispatch = useDispatch();
     const [loading, setLoading] = useState(false);
     const [moreLoading, setMoreLoading] = useState(false);
@@ -20,7 +20,7 @@ export const  Home = ({ navigation }) => {
         dispatch(getArticlesAction(setLoading));
     }, []);
 
-    function getMore(){
+    const getMore = () => {
         dispatch(getMoreArticlesAction(setMoreLoading))
     }
 
@@ -33,7 +33,7 @@ export const  Home = ({ navigation }) => {
                     data={articles}
                     onEndReached={getMore}
                     onRefresh={onRefresh}
-                    renderItem={({ item }) => (
+                    renderItem={({ item } : any) => (
                         <ArticleCard dep={item} navigation={navigation} />
                     )}
                     ListEmptyComponent={<EmptyList message={I18n.t("NoProviders")} />}

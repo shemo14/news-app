@@ -1,12 +1,11 @@
-import React, { Fragment, useEffect, useState, useCallback } from "react";
-import {View, ActivityIndicator, Image, StyleSheet} from 'react-native'
-import I18n from "@locale"
-import { Container, Header, List, EmptyList, ArticleCard, SText } from '@components'
-import { useDispatch, useSelector } from "react-redux";
-import { getArticlesAction, getMoreArticlesAction } from '../../store/Actions'
-import { Images, COLORS, CommonStyle, fonts, moderateScale, scale, verticalScale, height } from "@common";
+import React, { useEffect, useState } from "react";
+import {View, Image, StyleSheet} from 'react-native'
+import { Container, Header, SText } from '@components'
+import { useDispatch } from "react-redux";
+import { getArticlesAction } from '../../store/Actions'
+import { COLORS, CommonStyle, fonts, moderateScale, scale, verticalScale, height } from "@common";
 
-export const  ArticleDetails = ({ navigation, route }) => {
+export const  ArticleDetails = ({ navigation, route } : any) => {
     const dispatch = useDispatch();
     const [loading, setLoading] = useState(false);
     const { details } = route.params;
@@ -54,28 +53,6 @@ export const  ArticleDetails = ({ navigation, route }) => {
 }
 
 const styles = StyleSheet.create({
-    Card: {
-        marginHorizontal: scale(10),
-        borderRadius: scale(15),
-        overflow: "hidden",
-        ...CommonStyle.shadow,
-        marginTop: moderateScale(10),
-        marginBottom: scale(5),
-    },
-    Image: {
-        height: moderateScale(180),
-    },
-    WrabDis: {
-        position: "absolute",
-        backgroundColor: COLORS.white,
-        padding: scale(3),
-        paddingHorizontal: scale(5),
-        flexDirection: "row",
-        alignItems: "center",
-        margin: scale(10),
-        right: scale(5),
-        borderRadius: scale(5),
-    },
     WrabDistance: {
         backgroundColor: COLORS.secondary,
         borderRadius: scale(10),
@@ -85,12 +62,6 @@ const styles = StyleSheet.create({
         marginStart: scale(5),
         marginTop: scale(5),
     },
-    Icon: {
-        fontSize: moderateScale(18),
-        color: COLORS.main,
-        marginEnd: moderateScale(5),
-    },
-
     backgroundColors: {
         backgroundColor: COLORS.main,
         borderRadius: scale(10),
@@ -99,33 +70,5 @@ const styles = StyleSheet.create({
         paddingHorizontal: moderateScale(5),
         marginStart: scale(10),
         marginTop: scale(5),
-    },
-
-    Centerd: {
-        flexDirection: "row",
-        alignItems: "center",
-    },
-    Wrabes: {
-        flexDirection: "row",
-        marginTop: scale(12),
-        marginStart: scale(10),
-        flexWrap: "wrap",
-        paddingBottom: 10
-    },
-    Content: {
-        backgroundColor: COLORS.white,
-        flex: 1,
-    },
-    address: {
-        color: COLORS.blackLight,
-        marginTop: verticalScale(10),
-        fontFamily: fonts.Plain,
-        marginStart: scale(10),
-        marginBottom: scale(5),
-        flexWrap: "wrap",
-    },
-    rateText: {
-        marginEnd: moderateScale(5),
-        fontSize: moderateScale(13),
     },
 });

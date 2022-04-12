@@ -1,40 +1,29 @@
 import React from "react";
 import { View } from 'react-native'
-import { COLORS, moderateScale, scale, width } from "@common";
-import { Container, SText, LangSwitchTab, ThemeSwitchTab } from '@components'
+import { COLORS } from "@common";
+import { styles } from '../../styles'
+import { Container, SText, LangSwitchTab, ThemeSwitchTab, Header } from '@components'
 import {useSelector} from "react-redux";
+import I18n from "@locale"
 
 export const  Settings = () => {
     const { theme } = useSelector((state) => state.general);
-    const backgroundColor    = { backgroundColor: theme === 'light' ? COLORS.white : COLORS.mainDark }
+    const backgroundColor    = { backgroundColor: theme === 'dark' ? COLORS.mainDark : COLORS.white }
     return (
-        <Container header={true}>
-            <SText title={'Settings'} style={{ fontSize: 20, marginVertical: 20 }} />
-            <View style={[{ flexDirection: "row",
-                alignItems: "center",
-                justifyContent: "space-between",
-                padding: scale(10),
-                backgroundColor: COLORS.white,
-                borderRadius: scale(10),
-                width: width - scale(20),
-                alignSelf: "center",
-                marginBottom: moderateScale(15), }, backgroundColor]}>
-                <SText title={'language'} />
-                <LangSwitchTab containerStyle={backgroundColor} />
-            </View>
+        <View style={{ flex: 1 }}>
+            <Header title={I18n.t('settings')} />
 
-            <View style={[{ flexDirection: "row",
-                alignItems: "center",
-                justifyContent: "space-between",
-                padding: scale(10),
-                backgroundColor: COLORS.white,
-                borderRadius: scale(10),
-                width: width - scale(20),
-                alignSelf: "center",
-                marginBottom: moderateScale(15), }, backgroundColor]}>
-                <SText title={'Theme'} />
-                <ThemeSwitchTab containerStyle={backgroundColor} />
-            </View>
-        </Container>
+            <Container header={true} style={{ paddingTop: 20 }}>
+                <View style={[ styles.settingsTab , backgroundColor]}>
+                    <SText title={I18n.t('common.lang')} />
+                    <LangSwitchTab containerStyle={backgroundColor} />
+                </View>
+
+                <View style={[ styles.settingsTab , backgroundColor]}>
+                    <SText title={I18n.t('common.theme')} />
+                    <ThemeSwitchTab containerStyle={backgroundColor} />
+                </View>
+            </Container>
+        </View>
     )
 }

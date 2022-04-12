@@ -36,7 +36,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     // height: height / 1.35,
     height: height / 1.8,
-    backgroundColor: COLORS.bgLight,
+    backgroundColor: 'transparent',
   },
   text: {
     fontSize: moderateScale(18),

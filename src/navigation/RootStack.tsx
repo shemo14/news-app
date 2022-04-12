@@ -6,6 +6,9 @@ import { MainStackNavigator } from "./MainStack";
 import { useDispatch } from "react-redux";
 import { useNetInfo } from "@react-native-community/netinfo";
 import { networkChangedAction } from "../store/Actions";
+import * as Linking from "expo-linking";
+
+const prefix = Linking.createURL('/');
 
 const RootStack = createStackNavigator();
 
@@ -31,9 +34,19 @@ const RootNavigator = () => {
         dispatch(networkChangedAction(netInfo.isInternetReachable));
     }, [netInfo]);
 
+    const linking = {
+        prefixes: [prefix],
+        config: {
+            screens: {
+                Home: "Home",
+                Settings: "Settings",
+            },
+        },
+    };
+
     return (
         <View style={{ flex: 1 }}>
-            <NavigationContainer >
+            <NavigationContainer linking={linking}>
                 <RootStackScreen />
             </NavigationContainer>
         </View>

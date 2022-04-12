@@ -27,7 +27,7 @@ export const Container = ({
   ...props
 }) => {
   const { network, theme } = useSelector((state) => state.general);
-  const backgroundColor    = { backgroundColor: theme === 'light' ? COLORS.bgLight : COLORS.bgDark }
+  const backgroundColor    = { backgroundColor: theme === 'dark' ? COLORS.bgDark : COLORS.bgLight }
 
 
   let renderContent = () => {
@@ -47,7 +47,7 @@ export const Container = ({
       <View style={[styles.Container, style, backgroundColor]}>{children}</View>
     );
   };
-  
+
   return loading ? (
     <Spinner mode="full" />
   ) : // <LogoSpinner fullStretch />

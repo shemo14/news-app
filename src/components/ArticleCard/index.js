@@ -3,11 +3,10 @@ import { StyleSheet, TouchableOpacity, Image, View } from "react-native";
 import { SText } from "@components";
 import { Images, COLORS, CommonStyle, fonts, moderateScale, scale, verticalScale } from "@common";
 import {useSelector} from "react-redux";
-// import { toProviderProducts } from "@routes";
 
 export const ArticleCard = ({ dep, navigation }) => {
     const { theme } = useSelector((state) => state.general);
-    const backgroundColor    = { backgroundColor: theme === 'light' ? COLORS.white : COLORS.mainDark }
+    const backgroundColor    = { backgroundColor: theme === 'dark' ? COLORS.mainDark : COLORS.white }
     const [loadingImage, setloadingImage] = useState(false);
     const onLoadImg = (e) => {
         if (e !== undefined) {

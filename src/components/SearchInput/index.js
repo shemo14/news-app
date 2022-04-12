@@ -11,6 +11,7 @@ import { COLORS } from "../../common/Colors";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import { moderateScale, scale, verticalScale } from "../../common/Scalling";
 import { IS_IOS, fonts } from "@common";
+import {useSelector} from "react-redux";
 
 export const SearchInput = ({
   containerStyle,
@@ -21,6 +22,9 @@ export const SearchInput = ({
   onPress,
   ...props
 }) => {
+  const { theme } = useSelector((state) => state.general);
+  const color    = { color: theme === 'dark' ? COLORS.white : COLORS.mainDark }
+
   return (
     <View style={[styles.container, containerStyle]}>
       <MaterialCommunityIcons
@@ -35,7 +39,7 @@ export const SearchInput = ({
         name={IconName}
       />
       <TextInput
-        style={[styles.input, inputStyle]}
+        style={[styles.input, inputStyle, color]}
         selectionColor={COLORS.secondaryLight}
         placeholderTextColor={COLORS.blackLight}
         numberOfLines={1}
@@ -69,7 +73,6 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   input: {
-    color: COLORS.black,
     fontFamily: fonts.Plain,
     flex: 1,
     textAlign: I18nManager.isRTL ? "right" : "left",
